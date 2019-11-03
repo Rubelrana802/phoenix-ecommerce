@@ -1,0 +1,11 @@
+create or REPLACE VIEW invoice_wise AS
+select i.id, i.`date`, i.sell_invoice_no, i.customer_id,
+i.grand_total_amount, i.payment_type, i.discount_percentage, i.total_discount,
+i.tax_percentage, i.total_tax, i.vat_percentage, i.total_vat, d.invoice_id,
+d.product_id, d.inventory_id, d.store_id, d.quantity, d.rate, d.total_price, d.discount,
+p.category_id, p.product_name, p.serial_number, p.model, p.sale_price, p.supplier_price
+FROM invoices i
+join  invoice_details d
+on(i.id = d.invoice_id)
+join products p
+on(p.id = d.product_id)

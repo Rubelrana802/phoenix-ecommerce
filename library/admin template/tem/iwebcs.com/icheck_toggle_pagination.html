@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<!-- Mirrored from iwebcs.com/icheck_toggle_pagination.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Sep 2019 08:45:56 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Bdtask - Bootstrap Admin Template Dashboard</title>
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/dist/img/ico/favicon.png" type="image/x-icon">
+        <link rel="apple-touch-icon" type="image/x-icon" href="assets/dist/img/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="assets/dist/img/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="assets/dist/img/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="assets/dist/img/ico/apple-touch-icon-144-precomposed.png">
+
+        <!-- Start Global Mandatory Style
+        =====================================================================-->
+        <!-- jquery-ui css -->
+        <link href="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap -->
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap rtl -->
+        <!--<link href="assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
+        <!-- Lobipanel css -->
+        <link href="assets/plugins/lobipanel/lobipanel.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Pace css -->
+        <link href="assets/plugins/pace/flash.css" rel="stylesheet" type="text/css"/>
+        <!-- Font Awesome -->
+        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Pe-icon -->
+        <link href="assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css"/>
+        <!-- Themify icons -->
+        <link href="assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css"/>
+        <!-- End Global Mandatory Style
+        =====================================================================-->
+        <!-- Start page Label Plugins 
+        =====================================================================-->
+        <!-- iCheck -->
+        <link href="assets/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap toggle css -->
+        <link href="assets/plugins/bootstrap-toggle/bootstrap-toggle.min.css" rel="stylesheet" type="text/css"/>
+        <!-- End page Label Plugins 
+        =====================================================================-->
+        <!-- Start Theme Layout Style
+        =====================================================================-->
+        <!-- Theme style -->
+        <link href="assets/dist/css/styleBD.css" rel="stylesheet" type="text/css"/>
+        <!-- Theme style rtl -->
+        <!--<link href="assets/dist/css/styleBD-rtl.css" rel="stylesheet" type="text/css"/>-->
+        <!-- End Theme Layout Style
+        =====================================================================-->
+    </head>
+    <body class="hold-transition sidebar-mini">
+        <!-- Site wrapper -->
+        <div class="wrapper">
+            <header class="main-header"> 
+                <a href="index-2.html" class="logo"> <!-- Logo -->
+                    <span class="logo-mini">
+                        <!--<b>A</b>BD-->
+                        <img src="assets/dist/img/mini-logo.png" alt="">
+                    </span>
+                    <span class="logo-lg">
+                        <!--<b>Admin</b>BD-->
+                        <img src="assets/dist/img/logo.png" alt="">
+                    </span>
+                </a>
+                <!-- Header Navbar -->
+                <nav class="navbar navbar-static-top">
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="pe-7s-keypad"></span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <!-- Messages -->
+                            <li class="dropdown messages-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="pe-7s-mail"></i>
+                                    <span class="label label-success">4</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="header">You have 5 messages</li>
+                                    <li>
+                                        <ul class="menu">
+                                            <li><!-- start message -->
+                                                <a href="#">
+                                                    <div class="pull-left"><img src="assets/dist/img/avatar.png" class="img-circle" alt="User Image"></div>
+                                                    <h4>Lorem Ipsum is simply<small><i class="fa fa-clock-o"></i> 10 mins</small></h4>
+                                                    <p>It is a long established fact that a reader</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left"><img src="assets/dist/img/avatar2.png" class="img-circle" alt="User Image"></div>
+                                                    <h4>Contrary to popular belief <small><i class="fa fa-clock-o"></i> 9 hours</small></h4>
+                                                    <p>There are many variations of passages</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left"><img src="assets/dist/img/avatar3.png" class="img-circle" alt="User Image"></div>
+                                                    <h4>The standard chunk<small><i class="fa fa-clock-o"></i> 3 hours</small></h4>
+                                                    <p>There are many variations of passages</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left"><img src="assets/dist/img/avatar4.png" class="img-circle" alt="User Image"></div>
+                                                    <h4>It is a long<small><i class="fa fa-clock-o"></i> 2 days</small></h4>
+                                                    <p>packages and web page editors</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left"><img src="assets/dist/img/avatar5.png" class="img-circle" alt="User Image"></div>
+                                                    <h4>Contrary to popular belief<small><i class="fa fa-clock-o"></i> Yesterday</small></h4>
+                                                    <p> Lorem Ipsum is not simply random text</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="footer"><a href="#">See All Messages</a></li>
+                                </ul>
+                            </li>
+                            <!-- Notifications -->
+                            <li class="dropdown notifications-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="pe-7s-speaker"></i>
+                                    <span class="label label-warning">8</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="header">You have 10 notifications</li>
+                                    <li>
+                                        <ul class="menu">
+                                            <li><a href="#"><i class="ti-user color-gray"></i> 5 new members joined today </a></li>
+                                            <li><a href="#"><i class="ti-announcement color-green"></i> Very long description here that may not fit into the page and may cause design problems</a></li>
+                                            <li><a href="#"><i class="fa fa-users"></i> 5 new members joined</a></li>
+                                            <li><a href="#"><i class="ti-shopping-cart color-violet"></i> 25 sales made</a></li>
+                                            <li><a href="#"><i class="ti-twitter color-info"></i>  3 New Followers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="footer"><a href="#">View all</a></li>
+                                </ul>
+                            </li>
+                            <!-- Tasks -->
+                            <li class="dropdown tasks-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="pe-7s-flag"></i>
+                                    <span class="label label-danger">9</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="header">You have 9 tasks</li>
+                                    <li>
+                                        <ul class="menu">
+                                            <li> <!-- Task item -->
+                                                <a href="#">
+                                                    <h3>
+                                                        Design some buttons
+                                                        <small class="pull-right">20%</small>
+                                                    </h3>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                                            <span class="sr-only">30% Complete (primary)</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li> <!-- end task item -->
+                                            <li> <!-- Task item -->
+                                                <a href="#">
+                                                    <h3>
+                                                        Create a nice theme
+                                                        <small class="pull-right">40%</small>
+                                                    </h3>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                            <span class="sr-only">40% Complete (primary)</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li> <!-- end task item -->
+                                            <li> <!-- Task item -->
+                                                <a href="#">
+                                                    <h3>
+                                                        Some task I need to do
+                                                        <small class="pull-right">60%</small>
+                                                    </h3>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                            <span class="sr-only">60% Complete (info)</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li> <!-- end task item -->
+                                            <li> <!-- Task item -->
+                                                <a href="#">
+                                                    <h3>
+                                                        Make beautiful transitions
+                                                        <small class="pull-right">80%</small>
+                                                    </h3>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                            <span class="sr-only">80% Complete (warning)</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <!-- end task item -->
+                                        </ul>
+                                    </li>
+                                    <li class="footer">
+                                        <a href="#">View all tasks</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- settings -->
+                            <li class="dropdown dropdown-user">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="pe-7s-settings"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="profile.html"><i class="pe-7s-users"></i> User Profile</a></li>
+                                    <li><a href="#"><i class="pe-7s-settings"></i> Settings</a></li>
+                                    <li><a href="login.html"><i class="pe-7s-key"></i> Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- =============================================== -->
+            <!-- Left side column. contains the sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel text-center">
+                        <div class="image">
+                            <img src="assets/dist/img/user2-160x160.png" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="info">
+                            <p>Naeem Khan</p>
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+                    <!-- search form -->
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form> <!-- /.search form -->
+                    <!-- sidebar menu -->
+                    <ul class="sidebar-menu">
+                        <li class="header">MAIN NAVIGATION</li>
+                        <li>
+                            <a href="index-2.html"><i class="ti-home"></i> <span>Dashboard</span>
+                                <span class="pull-right-container">
+                                    <span class="label label-success pull-right">v.1</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="treeview active">
+                            <a href="#">
+                                <i class="ti-paint-bucket"></i><span>UI Elements</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="tabs.html">Tabs</a></li>
+                                <li><a href="notification.html">Notification</a></li>
+                                <li><a href="tree-view.html">Tree View</a></li>
+                                <li><a href="progressbars.html">Progressber</a></li>
+                                <li><a href="list.html">List View</a></li>
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="panels.html">Panels</a></li>
+                                <li><a href="modals.html">Modals</a></li>
+                                <li class="active"><a href="icheck_toggle_pagination.html">iCheck, Toggle, Pagination</a></li>
+                                <li><a href="labels-badges-alerts.html">Labels, Badges, Alerts</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-pencil-alt"></i> <span>Forms</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="forms_basic.html">Basic Forms</a></li>
+                                <li><a href="forms_validation.html">Validation Forms</a></li>
+                                <li><a href="forms_cropper.html">Cropper</a></li>
+                                <li><a href="form_file_upload.html">Forms File Upload</a></li>
+                                <li><a href="forms_editor_ck.html">CK Editor</a></li>
+                                <li><a href="forms_editor_summernote.html">Summernote</a></li>
+                                <li><a href="form_wizard.html">Form Wizaed</a></li>
+                                <li><a href="forms_editor_markdown.html">Markdown</a></li>
+                                <li><a href="forms_editor_trumbowyg.html">Trumbowyg</a></li>
+                                <li><a href="form_editor_wysihtml5.html">Wysihtml5</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-layout"></i> <span>Tables</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="table.html">Simple tables</a></li>
+                                <li><a href="dataTables.html">Data tables</a></li>
+                                <li><a href="footable.html">FooTable</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-location-pin"></i> <span>Maps</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="maps_data.html">Data Maps</a></li>
+                                <li><a href="maps_jvector.html">Jvector Maps</a></li>
+                                <li><a href="maps_google.html">Google map</a></li>
+                                <li><a href="maps_snazzy.html">Snazzy Map</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-bar-chart-alt"></i><span>Charts</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="charts_flot.html">Flot Chart</a></li>
+                                <li><a href="charts_Js.html">Chart js</a></li>
+                                <li><a href="charts_morris.html">Morris Charts</a></li>
+                                <li><a href="charts_sparkline.html">Sparkline Charts</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-email"></i> <span>Mailbox</span>
+                                <span class="pull-right-container">
+                                    <small class="label pull-right bg-yellow">19</small>
+                                    <small class="label pull-right bg-green">13</small>
+                                    <small class="label pull-right bg-red">3</small>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="disabled">
+                                    <a href="#">Mailbox 2
+                                        <span class="pull-right-container">
+                                            <small class="label pull-right bg-green">coming</small>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li><a href="mailDetails.html">Mailbox Details</a></li>
+                                <li><a href="compose.html">Compose</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-spray"></i>
+                                <span>Icons</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="icons_bootstrap.html">Bootstrap Icons</a></li>
+                                <li><a href="icons_fontawesome.html">Fontawesome Icon</a></li>
+                                <li><a href="icons_flag.html">Flag Icons</a></li>
+                                <li><a href="icons_material.html">Material Icons</a></li>
+                                <li><a href="icons_weather.html">Weather Icons </a></li>
+                                <li><a href="icons_line.html">Line Icons</a></li>
+                                <li><a href="icons_pe.html">Pe Icons</a></li>
+                                <li><a href="icon_socicon.html">Socicon Icons</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="widgets.html">
+                                <i class="ti-microsoft"></i> <span>Widgets</span>
+                                <span class="pull-right-container">
+                                    <small class="label pull-right bg-green">new</small>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="calender.html">
+                                <i class="ti-calendar"></i><span>Calendar</span>
+                                <span class="pull-right-container">
+                                    <small class="label pull-right bg-red">5</small>
+                                    <small class="label pull-right bg-yellow">21</small>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-ruler-pencil"></i> <span>App Views</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="invoice.html">Invoice</a></li>
+                                <li><a href="timeline.html">Vertical timeline</a></li>
+                                <li><a href="pricing.html">Pricing Table</a></li>
+                                <li><a href="slider.html">Slider</a></li>
+                                <li><a href="carousel.html">Carousel</a></li>
+                                <li><a href="code_editor.html">Code editor</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-layers"></i> <span>Other page</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="register.html">Register</a></li>
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="forget_password.html">Forget password</a></li>
+                                <li><a href="lockscreen.html">Lockscreen</a></li>
+                                <li><a href="404.html">404 Error</a></li>
+                                <li><a href="505.html">505 Error</a></li>
+                                <li><a href="blank.html">Blank Page</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="gridSystem.html">
+                                <i class="ti-layout-grid2"></i> <span>Grid Style</span>
+                                <span class="pull-right-container">
+                                    <small class="label pull-right bg-green">new</small>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-layout"></i> <span>Layout</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="layout_fixed.html">Layout Fixed</a></li>
+                                <li><a href="layout_boxed.html">Layout Boxed</a></li>
+                                <li><a href="layout_collapsed_sidebar.html">Layout Collapsed</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="ti-direction-alt"></i> <span>Multilevel</span>
+                                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#">Level One</a></li>
+                                <li>
+                                    <a href="#">Level One
+                                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"> Level Two</a></li>
+                                        <li>
+                                            <a href="#">Level Two
+                                                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                                            </a>
+                                            <ul class="treeview-menu">
+                                                <li><a href="#">Level Three</a></li>
+                                                <li><a href="#">Level Three</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Level One</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="documentation/index.html" target="_blank"><i class="ti-bookmark"></i><span>Documentation</span></a></li>
+                        <li class="header">LABELS</li>
+                        <li><a href="#"><i class="fa fa-circle color-green"></i> <span>Important</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle color-red"></i> <span>Warning</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle color-yellow"></i> <span>Information</span></a></li>
+                    </ul>
+                </div> <!-- /.sidebar -->
+            </aside>
+            <!-- =============================================== -->
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <div class="header-icon"><i class="pe-7s-date"></i></div>
+                    <div class="header-title">
+                        <h1>iCheck, Toggle</h1>
+                        <small>A slideshow component for cycling through elements, like a carousel. Nested carousels are not supported.</small>
+                        <ol class="breadcrumb">
+                            <li><a href="index-2.html"><i class="pe-7s-home"></i> Home</a></li>
+                            <li><a href="#">Ui Elements</a></li>
+                            <li class="active">Carousel</li>
+                        </ol>
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="panel panel-bd lobidisable">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Minimal skin</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="skin-minimal">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="i-check">
+                                                    <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                                                    <label for="minimal-checkbox-1">Checkbox 1</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input tabindex="6" type="checkbox" id="minimal-checkbox-2" checked>
+                                                    <label for="minimal-checkbox-2">Checkbox 2</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="checkbox" id="minimal-checkbox-disabled" disabled>
+                                                    <label for="minimal-checkbox-disabled">Disabled</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="checkbox" id="minimal-checkbox-disabled-checked" checked disabled>
+                                                    <label for="minimal-checkbox-disabled-checked">Disabled &amp; checked</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="i-check">
+                                                    <input tabindex="7" type="radio" id="minimal-radio-1" name="minimal-radio">
+                                                    <label for="minimal-radio-1">Radio button 1</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input tabindex="8" type="radio" id="minimal-radio-2" name="minimal-radio" checked>
+                                                    <label for="minimal-radio-2">Radio button 2</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="radio" id="minimal-radio-disabled" disabled>
+                                                    <label for="minimal-radio-disabled">Disabled</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="radio" id="minimal-radio-disabled-checked" checked disabled>
+                                                    <label for="minimal-radio-disabled-checked">Disabled &amp; checked</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="panel panel-bd lobidisable">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Square skin</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="skin-square">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="i-check">
+                                                    <input tabindex="9" type="checkbox" id="square-checkbox-1">
+                                                    <label for="square-checkbox-1">Checkbox 1</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input tabindex="10" type="checkbox" id="square-checkbox-2" checked>
+                                                    <label for="square-checkbox-2">Checkbox 2</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="checkbox" id="square-checkbox-disabled" disabled>
+                                                    <label for="square-checkbox-disabled">Disabled</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="checkbox" id="square-checkbox-disabled-checked" checked disabled>
+                                                    <label for="square-checkbox-disabled-checked">Disabled &amp; checked</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="i-check">
+                                                    <input tabindex="11" type="radio" id="square-radio-1" name="square-radio">
+                                                    <label for="square-radio-1">Radio button 1</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input tabindex="12" type="radio" id="square-radio-2" name="square-radio" checked>
+                                                    <label for="square-radio-2">Radio button 2</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="radio" id="square-radio-disabled" disabled>
+                                                    <label for="square-radio-disabled">Disabled</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="radio" id="square-radio-disabled-checked" checked disabled>
+                                                    <label for="square-radio-disabled-checked">Disabled &amp; checked</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="panel panel-bd lobidisable">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Flat skin</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="skin-flat">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="i-check">
+                                                    <input tabindex="13" type="checkbox" id="flat-checkbox-1">
+                                                    <label for="flat-checkbox-1">Checkbox 1</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input tabindex="14" type="checkbox" id="flat-checkbox-2" checked>
+                                                    <label for="flat-checkbox-2">Checkbox 2</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="checkbox" id="flat-checkbox-disabled" disabled>
+                                                    <label for="flat-checkbox-disabled">Disabled</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="checkbox" id="flat-checkbox-disabled-checked" checked disabled>
+                                                    <label for="flat-checkbox-disabled-checked">Disabled &amp; checked</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="i-check">
+                                                    <input tabindex="15" type="radio" id="flat-radio-1" name="flat-radio">
+                                                    <label for="flat-radio-1">Radio button 1</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input tabindex="16" type="radio" id="flat-radio-2" name="flat-radio" checked>
+                                                    <label for="flat-radio-2">Radio button 2</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="radio" id="flat-radio-disabled" disabled>
+                                                    <label for="flat-radio-disabled">Disabled</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="radio" id="flat-radio-disabled-checked" checked disabled>
+                                                    <label for="flat-radio-disabled-checked">Disabled &amp; checked</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="panel panel-bd lobidisable">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Line skin</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="skin-line">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="i-check">
+                                                    <input tabindex="17" type="checkbox" id="line-checkbox-1">
+                                                    <label for="line-checkbox-1">Checkbox 1</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input tabindex="18" type="checkbox" id="line-checkbox-2" checked>
+                                                    <label for="line-checkbox-2">Checkbox 2</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="checkbox" id="line-checkbox-disabled" disabled>
+                                                    <label for="line-checkbox-disabled">Disabled</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="checkbox" id="line-checkbox-disabled-checked" checked disabled>
+                                                    <label for="line-checkbox-disabled-checked">Disabled &amp; checked</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="i-check">
+                                                    <input tabindex="19" type="radio" id="line-radio-1" name="line-radio">
+                                                    <label for="line-radio-1">Radio button 1</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input tabindex="20" type="radio" id="line-radio-2" name="line-radio" checked>
+                                                    <label for="line-radio-2">Radio button 2</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="radio" id="line-radio-disabled" disabled>
+                                                    <label for="line-radio-disabled">Disabled</label>
+                                                </div>
+                                                <div class="i-check">
+                                                    <input type="radio" id="line-radio-disabled-checked" checked disabled>
+                                                    <label for="line-radio-disabled-checked">Disabled &amp; checked</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-bd lobidisable">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Toggle demo</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h4 class="m-t-0">Basic example</h4>
+                                            <p>Simply add <code>data-toggle="toggle"</code> to convert checkboxes into toggles.</p>
+                                            <input type="checkbox" checked data-toggle="toggle">
+
+                                            <hr>
+                                            <h4 class="m-t-0">Inline Checkboxes</h4>
+                                            <p>Refer to Bootstrap <a href="http://getbootstrap.com/css/#forms-controls" target="_blank">Form 
+                                                    Controls</a> documentation to create inline checkboxes. Simply add <code>data-toggle="toggle"</code> to
+                                                a convert checkboxes into toggles.</p>
+
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" checked data-toggle="toggle"> First
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" data-toggle="toggle"> Second
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" data-toggle="toggle"> Third
+                                            </label>
+
+                                            <hr>
+                                            <h4 class="m-t-0">Size</h4>
+                                            <p>Bootstrap toggle is available in different sizes. Refer to Bootstrap <a href="http://getbootstrap.com/css/#buttons-sizes" target="_blank">Button Sizes</a> documentation for more information.</p>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-size="large">
+                                                <input type="checkbox" checked data-toggle="toggle" data-size="normal">
+                                                <input type="checkbox" checked data-toggle="toggle" data-size="small">
+                                                <input type="checkbox" checked data-toggle="toggle" data-size="mini">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h4 class="m-t-0">Custom Sizes</h4>
+                                            <p>Bootstrap toggle can handle custom sizes by <code>data-width</code> and <code>data-height</code> options.</p>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-width="100" data-height="75">
+                                                <input type="checkbox" checked data-toggle="toggle" data-height="75">
+                                                <input type="checkbox" checked data-toggle="toggle" data-width="100">
+                                            </div>
+                                            <hr>
+                                            <h4 class="m-t-0">Colors</h4>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary">
+                                                <input type="checkbox" checked data-toggle="toggle" data-onstyle="success">
+                                                <input type="checkbox" checked data-toggle="toggle" data-onstyle="info">
+                                                <input type="checkbox" checked data-toggle="toggle" data-onstyle="warning">
+                                                <input type="checkbox" checked data-toggle="toggle" data-onstyle="danger">
+                                                <input type="checkbox" checked data-toggle="toggle" data-onstyle="default">
+                                            </div>
+                                            <hr>
+                                            <h4 class="m-t-0">Colors Mix</h4>
+                                            <p>You can style on state as well as the off state.</p>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger">
+                                                <input type="checkbox" checked data-toggle="toggle" data-onstyle="warning" data-offstyle="info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-2">
+                                            <h4 class="m-t-0">Custom Style</h4>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-style="ios">
+                                                <input type="checkbox" checked data-toggle="toggle" data-style="android" data-onstyle="info">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <h4 class="m-t-0">Custom Text</h4>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <h4 class="m-t-0">Icons/Html Text</h4>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> Play" data-off="<i class='fa fa-pause'></i> Pause">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3">
+                                            <h4 class="m-t-0">Multiple Lines of Text</h4>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-on="Hello<br>World" data-off="Goodbye<br>World">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4 class="m-t-0">Animation Speed</h4>
+                                            <div class="toggle-example">
+                                                <input type="checkbox" checked data-toggle="toggle" data-style="slow">
+                                                <input type="checkbox" checked data-toggle="toggle" data-class="fast">
+                                                <input type="checkbox" checked data-toggle="toggle" data-style="quick">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> <!-- /.content -->
+            </div> <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs"> <b>Version</b> 1.0</div>
+                <strong>Copyright &copy; 2016-2017 <a href="#">bdtask</a>.</strong> All rights reserved. <i class="fa fa-heart color-green"></i>
+            </footer>
+        </div> <!-- ./wrapper -->
+        <!-- Start Core Plugins
+        =====================================================================-->
+        <!-- jQuery -->
+        <script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <!-- jquery-ui --> 
+        <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- lobipanel -->
+        <script src="assets/plugins/lobipanel/lobipanel.min.js" type="text/javascript"></script>
+        <!-- Pace js -->
+        <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+        <!-- SlimScroll -->
+        <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <!-- FastClick -->
+        <script src="assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+        <!-- AdminBD frame -->
+        <script src="assets/dist/js/frame.js" type="text/javascript"></script>
+        <!-- End Core Plugins
+        =====================================================================-->
+        <!-- Start Page Lavel Plugins
+        =====================================================================-->
+        <!-- iCheck js -->
+        <script src="assets/plugins/icheck/icheck.min.js" type="text/javascript"></script>
+        <!-- Bootstrap toggle -->
+        <script src="assets/plugins/bootstrap-toggle/bootstrap-toggle.min.js" type="text/javascript"></script>
+        <!-- End Page Lavel Plugins
+        =====================================================================-->
+        <!-- Start Theme label Script
+        =====================================================================-->
+        <!-- Dashboard js -->
+        <script src="assets/dist/js/dashboard.js" type="text/javascript"></script>
+        <!-- End Theme label Script
+        =====================================================================-->
+        <script>
+            $(document).ready(function () {
+
+                "use strict"; // Start of use strict
+
+                $('.skin-minimal .i-check input').iCheck({
+                    checkboxClass: 'icheckbox_minimal',
+                    radioClass: 'iradio_minimal',
+                    increaseArea: '20%'
+                });
+
+                $('.skin-square .i-check input').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green'
+                });
+
+
+                $('.skin-flat .i-check input').iCheck({
+                    checkboxClass: 'icheckbox_flat-red',
+                    radioClass: 'iradio_flat-red'
+                });
+
+                $('.skin-line .i-check input').each(function () {
+                    var self = $(this),
+                            label = self.next(),
+                            label_text = label.text();
+
+                    label.remove();
+                    self.iCheck({
+                        checkboxClass: 'icheckbox_line-blue',
+                        radioClass: 'iradio_line-blue',
+                        insert: '<div class="icheck_line-icon"></div>' + label_text
+                    });
+                });
+
+            });
+        </script>
+    </body>
+
+<!-- Mirrored from iwebcs.com/icheck_toggle_pagination.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Sep 2019 08:45:58 GMT -->
+</html>
