@@ -33,6 +33,7 @@
         <!-- Theme style -->
         <link href="{{ asset('public/admin/assets/dist/css/stylephoenix.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ asset('public/admin/assets/css/select2.min.css') }}" rel="stylesheet" type="text/css"/>
+            <link href="http://softest3.bdtask.com/isshue1.9/assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
         
         <script src="{{ asset('public/admin/assets/plugins/jQuery/jquery-1.12.4.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('public/admin/assets/js/jquery.validate.min.js') }}" type="text/javascript"></script>

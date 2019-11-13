@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     public function index(){
     	return view('admin.customer.create');
     }

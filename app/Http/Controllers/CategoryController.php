@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +21,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //$category = Category::all();
-        $category = DB::table('categories')->paginate(5);
+        $category = Category::all();
 
         return view('admin.category.manage')->with(['category' => $category]);
     }
@@ -28,7 +33,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.create');
+        $categorys = Category::where('parent_id', '=', 0)->get();
+        return view('admin.category.create', get_defined_vars());
     }
 
     /**
@@ -41,6 +47,27 @@ class CategoryController extends Controller
     {
         $categoryadd = new Category();
         $categoryadd->name = $request->category_name;
+        $categoryadd->parent_id = $request->parent_id;
+
+        //cat_favicon upload
+        if($request->hasfile('cat_favicon')) 
+            { 
+              $file = $request->file('cat_favicon');
+              $extension = $file->getClientOriginalExtension();
+              $filename =time().'.'.$extension;
+              $file->move('public/admin/category/images/', $filename);
+              $categoryadd->icon = $filename;
+        }
+        
+        //image upload
+        if($request->hasfile('image')) 
+            { 
+              $file = $request->file('image');
+              $extension = $file->getClientOriginalExtension();
+              $filename =time().'.'.$extension;
+              $file->move('public/admin/category/images/', $filename);
+              $categoryadd->image = $filename;
+        }
         $categoryadd->status = 1;
         $categoryadd->save();
 
@@ -71,7 +98,8 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::where('id',$id)->first();
-        return view('admin.category.update')->with(['category' => $category]);
+        $categorys = Category::where('parent_id', '=', 0)->get();
+        return view('admin.category.update', get_defined_vars());
     }
 
     /**
@@ -85,6 +113,7 @@ class CategoryController extends Controller
     {
         $category = Category::find($request->category_id); //form id 
         $category->name = $request->input('category_name');
+        $category->parent_id = $request->input('parent_id');
         $category->status = $request->input('status');
         $category->save();
 

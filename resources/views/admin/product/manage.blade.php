@@ -47,12 +47,13 @@
                                     <tr>
                                         <th>Sl.</th>
                                         <th>Product Name</th>
-                                        <th>Model</th>
-                                        <th>Supplier Name</th>
-                                        <th>Supplier Price</th>
+                                        <th>Category Name</th>
+                                        <th>Unit Name</th>
                                         <th>Sale Price</th>
+                                        <th>Supplier Price</th>
+                                        <th>Offer Price</th>
                                         <th>Image</th>
-                                        <th>Action</th>
+                                        <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -61,12 +62,14 @@
                                     <tr>
                                         <td>{{ ++$i }}</td>
                                         <td> <a href="{{ url('/admin/report/product/wise/'.$row->id) }}"> {{ $row->product_name }} </a> </td>
-                                        <th>{{ $row->model }}</th>
-                                        <th>{{ $row->supplier_name }}</th>
-                                        <th class="text-right">&#x9f3; {{ $row->supplier_price }}</th>
-                                        <th class="text-right">&#x9f3; {{ $row->sale_price }}</th>
+                                        <th>{{ $row->name }}</th>
+                                        <th>{{ $row->unit_name }}</th>
+                                        <th class="text-right">{{ $websetting->currency }} {{ $row->sale_price }}</th>
+                                        <th class="text-right">{{ $websetting->currency }} {{ $row->supplier_price }}</th>                                        
+                                        <th class="text-right">{{ $websetting->currency }} {{ $row->offer_price }}</th>                                       
                                         <th class="text-center"> <img style="width: 30px; height: 30px;" src="{{ asset('public/admin/product/images/'.$row->image) }}" alt=""></th>
-                                        <td>
+
+                                        <td style="width: 120px;">
                                             <a href="#" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="left" title="" data-original-title="Barcode"><i class="fa fa-barcode" aria-hidden="true"></i></a>
 
                                             <a class="btn btn-info btn-sm" href="{{ url('/admin/product/edit/'.$row->id) }}"><i style="font-size: 16px;" class="fa fa-pencil" data-toggle="tooltip" title="Update"></i></a>

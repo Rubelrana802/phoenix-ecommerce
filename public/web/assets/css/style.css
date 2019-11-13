@@ -834,14 +834,14 @@
 .small_product_price {
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
+	display: initial;
 }
 .small_product_content {
 	width: 100%;
 }
 .small_product_price span {
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 22px;
 	color: #ea3a3c;
 }
 .small_product_price span.old_price {

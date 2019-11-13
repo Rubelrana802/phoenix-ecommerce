@@ -22,7 +22,7 @@
 	                <div class="col-12">
 	                    <div class="breadcrumb_content">
 	                        <div class="breadcrumb_header">
-	                            <a href="index.html"><i class="fa fa-home"></i></a>
+	                            <a href="{{ route('home.page') }}"><i class="fa fa-home"></i></a>
 	                            <span><i class="fa fa-angle-right"></i></span>
 	                            <span> <a href="shop.html">product</a></span>
 	                            
@@ -38,6 +38,7 @@
 
         
         <!--product details start-->
+        @foreach($products as $product)
         <div class="product_details">
             <div class="container">
                 <div class="row">
@@ -59,12 +60,12 @@
                             <div class="tab-content product_d_content">
                                 <div class="tab-pane fade show active" id="p_d_tab1" role="tabpanel" >
                                     <div class="modal_tab_img">
-                                        <a href="#"><img src="{{ asset('public/web') }}/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="#"><img style="width: 300px; height: 300px;" src="{{ asset('public/admin/product/images/'.$product->image) }}" alt="img"></a>
                                         <div class="product_discount">
                                             <span>New</span>
                                         </div>
                                         <div class="view_img">
-                                            <a class="view_large_img" href="{{ asset('public/web') }}/assets/img/product/product18.jpg">View larger <i class="fa fa-search-plus"></i></a>
+                                            <a class="view_large_img" href="{{ asset('public/admin/product/images/'.$product->image) }}">View larger <i class="fa fa-search-plus"></i></a>
                                         </div>    
                                     </div>
                                 </div>
@@ -96,17 +97,12 @@
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="product_d_right">                        	
-                            <h1>Printed Summer Dress <span class="ml-3"> <a class="wishlisthover" style="color: #D12C2E; border-radius: 50%;"  href="#" title=" Add to Wishlist "><i class="fa fa-heart"></i></a></span> </h1>
+                            <h1>{{ $product->product_name }} <span class="ml-3"> <a class="wishlisthover" style="color: #D12C2E; border-radius: 50%;"  href="#" title=" Add to Wishlist "><i class="fa fa-heart"></i></a></span> </h1>
 
                              <div class="samll_product_ratting mb-10">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a class="comment_form" href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a class="comment_form" href="#"> Write a review </a></li>
-                                </ul>
+                                <div style="color: #999">
+                                    <span>Category : {{ $product->name }}</span>
+                                </div>
                             </div>
                             <div class="product_condition">
                                 <p>Condition:  <span>New product</span></p>
@@ -116,8 +112,8 @@
                                 <span> In stock </span>
                             </div>
                             <div class="small_product_price mb-15">
-                                <span class="new_price"> $140.00 </span>
-                                <span class="old_price">  $150.50  </span>
+                                <span class="new_price"> ${{ $product->offer_price }} </span>
+                                <span class="old_price">  ${{ $product->sale_price }}  </span>
                             </div>
                             <div class="product_d_quantity mb-20">
                                 <form action="#">
@@ -144,107 +140,15 @@
                             <div class="product_details_tab_button">    
                                 <ul class="nav" role="tablist">
                                     <li >
-                                        <a class="nav-link active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">More info</a>
-                                    </li>
-                                    <li>
-                                         <a class="nav-link" data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet" aria-selected="false">Data sheet</a>
-                                    </li>
-                                    <li>
-                                       <a class="nav-link button_three" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
+                                        <a class="nav-link active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Products Description</a>
                                     </li>
                                 </ul>
                             </div> 
                             <div class="tab-content product_details_content">
                                 <div class="tab-pane fade show active" id="info" role="tabpanel" >
                                     <div class="product_d_tab_content">
-                                        <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
+                                        <p>{!! $product->details !!}</p>
                                     </div>    
-                                </div>
-                                <div class="tab-pane fade" id="sheet" role="tabpanel">
-                                    <div class="product_d_table">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="first_child">Compositions</td>
-                                                    <td>Polyester</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="first_child">Styles</td>
-                                                    <td>Girly</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="first_child">Properties</td>
-                                                    <td>Short Dress</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="product_d_tab_content">
-                                        <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
-                                    </div> 
-                                </div>
-                                <div class="tab-pane fade" id="reviews" role="tabpanel">
-                                    <div class="product_d_tab_content">
-                                        <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
-                                    </div>
-                                    <div class="product_d_tab_content_inner">
-                                        <div class="product_d_tab_content_item">
-                                            <div class="samll_product_ratting">
-                                            <ul>
-                                               <li>Grade </li>
-                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                <li><a class="comment_form" href="#"><i class="fa fa-star"></i></a></li>
-                                            </ul>
-                                            </div>
-                                             <strong>Posthemes</strong> 
-                                             <p>09/07/2018</p>
-                                        </div>
-                                        <div class="product_d_tab_content_item">
-                                            <strong>demo</strong>
-                                            <p>That's OK!</p>
-                                        </div>
-                                    </div> 
-                                    <div class="product_review_form">
-                                        <form action="#">
-                                            <h2>Add a review </h2>
-                                            <p>Your email address will not be published. Required fields are marked </p>
-                                            <div class="samll_product_ratting review_rating">
-                                               <span>Your rating</span>
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="review_form_comment">
-                                                        <label for="review_comment">Your review </label>
-                                                        <textarea name="comment" id="review_comment" ></textarea>
-                                                    </div>
-                                                </div> 
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="review_form_author">
-                                                        <label for="author">Name</label>
-                                                        <input id="author"  type="text">
-                                                    </div>
-                                                </div> 
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="review_form_author">
-                                                        <label for="email">Email </label>
-                                                        <input id="email"  type="text">
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                            <button type="submit">Submit</button>
-                                         </form>   
-                                    </div>   
-                                       
                                 </div>
                             </div>  
 
@@ -255,9 +159,11 @@
             </div>
         </div>
         <!--product details tab end-->
+        @endforeach
         
        
         <!--Related_product start-->
+        @foreach($categories as $cat)
         <div class="product_details_s_product mb-40">
             <div class="container">
                 <div class="product_details_s_product_inner">
@@ -540,5 +446,6 @@
                 </div>     
             </div>
         </div>
+        @endforeach
         <!--Related_product end-->
     @endsection

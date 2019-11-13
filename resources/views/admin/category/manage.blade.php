@@ -41,11 +41,14 @@
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">
-                            <table id="" class="table table-bordered table-striped table-hover">
+                            <table id="dataTableExample2" class="table table-bordered table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="text-center">Category ID</th>
                                         <th class="text-center">Category Name</th>
+                                        <th class="text-center">Parent Category</th>
+                                        <th class="text-center">Category Icon</th>
+                                        <th class="text-center">Category Image</th>
                                         <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
@@ -55,6 +58,11 @@
                     				<tr class="text-center">
                         				<td>{{ ++$i }}</td>
                         				<td>{{ $row->name }}</td>
+                                        <td>
+                                            {{ $row->parent_id }}
+                                        </td>
+                                        <td>{{ $row->icon }}</td>
+                                        <td>{{ $row->image }}</td>
                         				<td>                                        		
                                        		<a class="btn btn-info btn-sm" href="{{ url('/admin/category/'.$row->id).'/edit' }}"><i style="font-size: 16px;" class="fa fa-pencil" data-toggle="tooltip" title="Update"></i></a>
 											
@@ -64,7 +72,6 @@
                     				@endforeach                                      
                                 </tbody>
                             </table>
-                            {{ $category->links() }}
                         </div>
                     </div>
                 </div>

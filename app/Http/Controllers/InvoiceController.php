@@ -19,6 +19,11 @@ use App\Websetting;
 use App\Company;
 class InvoiceController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     public function index(){
 
     	$products = Product::all();

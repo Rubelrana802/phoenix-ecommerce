@@ -9,6 +9,11 @@ use App\Websetting;
 use DB;
 class OfficeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     public function index(){
         return view('admin.office_loan.create');
     }

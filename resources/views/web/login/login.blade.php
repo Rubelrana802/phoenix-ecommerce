@@ -4,7 +4,17 @@
   Customer Login
 @endsection
 
-@section('content')         
+@section('content')    
+
+<style type="text/css">
+    .signup{
+        padding: !important -5px;
+    }
+
+    .facebook{
+        margin-left: 5px;
+    }
+</style>     
         <!--breadcrumbs area start-->
 	    <div class="breadcrumbs_area login_bread">
 	        <div class="container">
@@ -12,7 +22,7 @@
 	                <div class="col-12">
 	                    <div class="breadcrumb_content">
 	                        <div class="breadcrumb_header">
-	                            <a href="index.html"><i class="fa fa-home"></i></a>
+	                            <a href="{{ route('home.page') }}"><i class="fa fa-home"></i></a>
 	                            <span><i class="fa fa-angle-right"></i></span>
 	                            <span> login</span>
 	                        </div>
@@ -37,24 +47,16 @@
                                 <div class="login_form login">
                                     <form action="#">
                                         <div class="login_input text-center">
-                                            <h4>Don't have account? <a href="">SING UP</a> </h4>
+                                            <h4>Don't have account?</h4>
+                                            <button><a class="signup" href="#">SING UP</a></button>
                                             <h4>or Sign in with:</h4>
                                             <div class="row my-3 d-flex justify-content-center">
 						    				<!--Google +-->
-												<a href="login/google" class="btn btn-light google"><i class="fa fa-google-plus"></i>Login with Google</a>
+												<button><a href="login/google" class="google"><i class="fa fa-google-plus"></i>Login with Google</a></button>
 			                				<!--Facebook-->
-			                					<a href="login/facebook" class="btn btn-light facebook"><i class="fa fa-facebook"></i>Login with Facebook</a>
+			                					<button><a href="login/facebook" class="facebook"><i class="fa fa-facebook"></i>Login with Facebook</a></button>
 			                				</div>
-                                        </div>
-                                        <div class="login_submit">
-                                            <button type="submit">login</button>
-                                            <label for="remember">
-                                                <input id="remember" type="checkbox">
-                                                Remember me
-                                            </label>
-                                            <a href="#">Lost your password?</a>
-                                        </div>
-                                        
+                                        </div>                                        
                                     </form>
                                 </div>
                              </div>    

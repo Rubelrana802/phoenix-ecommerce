@@ -23,18 +23,44 @@ Route::get('/key-genrate', function() {
 	$exitCode = Artisan::call('key:generate');
 });
 
-
-
 Route::prefix('admin')->group(function() {
 
 	//Category resource route
 	Route::resource('/category', 'CategoryController');
-
 	//Tax resource route
 	Route::resource('/tax', 'TaxController');
-
 	//unit resource route
-	Route::resource('/unit', 'UnitController');
+	Route::resource('/unit', 'UnitController');	
+	//slider resource route
+	Route::resource('/slider', 'SliderController');
+	//Subscribe resource route
+	Route::resource('/subscribe', 'SubscribeController');
+	//contact resource route
+	Route::resource('/contact', 'ContactController');
+
+	//Accounting route
+		Route::get('/account/add', 'AccountController@index')->name('account.add');
+		Route::post('/account/save', 'AccountController@save')->name('account.save');
+		Route::get('/account/manage', 'AccountController@manage')->name('account.manage');
+		Route::get('/account/edit/{id}', 'AccountController@edit');
+		Route::post('/account/edit', 'AccountController@update')->name('account.update');
+		Route::get('/account/delete/{id}', 'AccountController@delete')->name('account.destroy');
+
+	//gallery route
+		Route::get('/gallery/add', 'ProductGalleryController@index')->name('gallery.add');
+		Route::post('/gallery/save', 'ProductGalleryController@save')->name('gallery.save');
+		Route::get('/gallery/manage', 'ProductGalleryController@manage')->name('gallery.manage');
+		Route::get('/gallery/edit/{id}', 'ProductGalleryController@edit');
+		Route::post('/gallery/edit', 'ProductGalleryController@update')->name('gallery.update');
+		Route::get('/gallery/delete/{id}', 'ProductGalleryController@delete')->name('gallery.destroy');
+
+	//brand route
+		Route::get('/brand/add', 'BrandController@index')->name('brand.add');
+		Route::post('/brand/save', 'BrandController@save')->name('brand.save');
+		Route::get('/brand/manage', 'BrandController@manage')->name('brand.manage');
+		Route::get('/brand/edit/{id}', 'BrandController@edit');
+		Route::post('/brand/edit', 'BrandController@update')->name('brand.update');
+		Route::get('/brand/delete/{id}', 'BrandController@delete')->name('brands.destroy');
 
 	//product route
 		Route::get('/product/add', 'ProductController@index')->name('product.add');
@@ -269,11 +295,28 @@ Route::post('/user/password', 'UserController@userpasswordupdate')->name('user.p
 
 Route::group(['namespace' => 'Web'], function (){
 
+	
+
 	Route::get('/', 'DefaultController@index')->name('home.page');
-	Route::get('/single-product', 'DefaultController@singleproduct')->name('single.product');
+
+	Route::post('/autocomplete/fetch', 'DefaultController@fetch')->name('autocomplete.fetch');
+
+	Route::get('/contact', 'DefaultController@contact')->name('contact.page');
+	Route::get('/about', 'DefaultController@about')->name('about.page');
+
+
+//product 
+	Route::get('/single-product/{id}', 'ProductController@singleproduct')->name('single.product');
+	Route::get('/shop-product', 'ProductController@shopproduct')->name('shop.product');
 
 
 
 
-	Route::get('/login', 'LoginController@index')->name('login.customer');
+//customer	
+	Route::get('/logins', 'CustomerController@index')->name('login.customer');
+	Route::get('/my-account', 'CustomerController@myaccount')->name('myaccount.customer');
+
+	Route::get('/wishlist', 'CustomerController@wishlist')->name('wishlist.customer');
+	Route::get('/view-card', 'CustomerController@viewcard')->name('viewcard.customer');
+	Route::get('/check-out', 'CustomerController@checkout')->name('checkout.customer');
 });

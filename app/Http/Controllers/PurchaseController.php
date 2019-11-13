@@ -14,6 +14,11 @@ use Illuminate\Http\Request;
 
 class PurchaseController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     public function index(){
     	$suppliers = Supplier::all();
     	$products = Product::all();

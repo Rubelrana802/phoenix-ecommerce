@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
+
+  public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     public function manage(){
         $company = Company::all();
         return view('admin.company.manage', get_defined_vars());

@@ -10,6 +10,11 @@ use DB;
 
 class PersonController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     public function index(){
         return view('admin.personal_loan.create');
     }

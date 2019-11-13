@@ -38,43 +38,34 @@
       </li>
     <!-- Invoice menu end -->
 
-
-    <!--New Account start-->
+    <!-- Category menu start -->
       <li class="treeview">
+        <a href="#"style="position: relative;"><i class="fa fa-list-alt"></i>Category<span class="pull-right-container">
+        <i class="fa fa-angle-left pull-right"></i></span>
+      </a>
+        <ul class="treeview-menu">
+          <li><a href="{{ url('/admin/category/create') }}">Add Category</a></li>
+          <li><a href="{{ url('/admin/category') }}">Manage Category</a></li>
+        </ul>
+      </li>
+    <!-- Category menu end -->
+
+    <!-- Brand menu start -->
+    <li class="treeview  ">
         <a href="#">
-          <i class="fa fa-money"></i><span>Accounts</span>
+            <i class="fa fa-apple"></i><span>Brand</span>
             <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
         <ul class="treeview-menu">
-          <li class="treeview"><a href="#">Chart of Account</a></li>
-          <li class="treeview"><a href="{{ route('supplier.payment') }}">Supplier Payment</a></li>
-          <li class="treeview"><a href="{{ route('customer.payment') }}">Customer Receive</a></li>
-          <li class="treeview"><a href="#">Debit Voucher</a></li>
-          <li class="treeview"><a href="#">Credit Voucher</a></li>
-          <li class="treeview"><a href="#">Vouchar Approval</a></li> 
-          <li class="treeview"><a href="#">Contra Voucher</a></li>
-          <li class="treeview"><a href="#">Journal Voucher</a></li> 
-          <li class="treeview">
-
-            <a href=""style="position: relative;">Report<span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i></span>
-            </a>
-            <ul class="treeview-menu">
-              <li class="treeview"><a href="#">Cash Book</a></li>
-              <li class="treeview"><a href="#">Inventory Ledger</a></li>
-              <li class="treeview"><a href="#">Bank Book</a></li>
-              <li class="treeview"><a href="#">General Ledger</a></li>
-              <li class="treeview"><a href="#">Trial Balance</a></li>
-              <li class="treeview"><a href="#">Cash Flow</a></li>
-              <li class="treeview"><a href="#">Coa Print</a></li>
-            </ul>   
-
-          </li>
+            <li class=""><a href="#">Add Brand</a></li>
+            <li class="">
+                <a href="#">Manage Brand</a>
+            </li>
         </ul>
-      </li>
-    <!-- New Account End -->
+    </li>
+    <!-- Brand menu end -->
 
     <!-- Product menu start -->
       <li class="treeview">
@@ -92,6 +83,37 @@
       </li>
     <!-- Product menu end -->
 
+    <!-- Gallery menu start -->
+    <li class="treeview  ">
+        <a href="#">
+            <i class="fa fa-image"></i><span>Product Image Gallery</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li class=""><a href="{{ route('gallery.add') }}">Add product image</a></li>
+            <li class="">
+                <a href="{{ route('gallery.manage') }}">Manage product image</a>
+            </li>
+        </ul>
+    </li>
+    <!-- Gallery menu end -->
+
+    <!-- Order menu start -->
+      <li class="treeview  ">
+          <a href="#">
+            <i class="fa fa-truck"></i><span>Order</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="">
+                <a href="#">Manage Order</a></li>
+          </ul>
+      </li>
+    <!-- Order menu end -->
 
     <!-- Customer menu start -->
       <li class="treeview">
@@ -102,11 +124,11 @@
             </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('customer.add') }}">Add Customer</a></li>
-          <li><a href="{{ route('customer.manage') }}">Manage Customer</a></li>
-          <li><a href="{{ route('customer.ledger') }}">Customer Ledger</a></li>
-          <li><a href="{{ route('credit.customer') }}">Credit Customer</a></li>
-          <li><a href="{{ route('paid.customer') }}">Paid Customer</a></li>
+          <li class="" ><a href="{{ route('customer.add') }}">Add Customer</a></li>
+          <li class="" ><a href="{{ route('customer.manage') }}">Manage Customer</a></li>
+          <li class="" ><a href="{{ route('customer.ledger') }}">Customer Ledger</a></li>
+          <li class="" ><a href="{{ route('credit.customer') }}">Credit Customer</a></li>
+          <li class="" ><a href="{{ route('paid.customer') }}">Paid Customer</a></li>
         </ul>
       </li>
     <!-- Customer menu end -->
@@ -214,26 +236,45 @@
           <li><a href="{{ route('bank.add') }}">Add New Bank</a></li>
           <li><a href="{{ route('bank.transaction.add') }}">Bank Transaction</a></li>
           <li><a href="{{ route('bank.manage') }}">Manage Bank</a></li>
-          <!-- <li><a href="{{ url('/bank/ledger') }}">Manage Ledger</a></li> -->
         </ul>
       </li>
     <!-- Bank menu end -->
 
 
-    <!-- Comission start -->
-      <li class="treeview">
+  <!-- Accounts menu start -->
+    <li class="treeview  ">
         <a href="#">
-            <i class="fa fa-percent" aria-hidden="true"></i> <span>Commission</span>
+            <i class="fa fa-money"></i><span>Accounts</span>
             <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#">Generate Commssion</a></li>
+            <li class="">
+                <a href="{{ route('account.add') }}">Create Accounts </a>
+            </li>
+            <li class="">
+                <a href="{{ route('account.manage') }}">Manage Accounts </a>
+            </li>
+            <li class=""><a href="{{ route('customer.payment') }}">Received</a></li>
+            <li class="">
+                <a href="{{ route('supplier.payment') }}">Payment</a>
+            </li>
+            <li class="">
+                <a href="#">Accounts Summary</a>
+            </li>
+            <li class="">
+                <a href="#">Cheque Manager</a>
+            </li>
+            <li class="">
+                <a href="#">Closing</a>
+            </li>
+            <li class="">
+                <a href="#">Closing Report</a>
+            </li>
         </ul>
-      </li>
-    <!-- Comission end -->
-
+    </li>
+    <!-- Accounts menu end -->
 
     <!-- Office loan start -->
       <li class="treeview">
@@ -255,7 +296,7 @@
 
 
     <!--  Personal loan start -->
-      <li class="treeview">
+<!--       <li class="treeview">
         <a href="#">
             <i class="fa fa-user-circle" aria-hidden="true"></i>
             <span>Personal Loan</span>
@@ -269,8 +310,31 @@
           <li><a href="{{ route('person.payment') }}">Add Payment</a></li>
           <li><a href="{{ route('person.manage') }}">Manage Loan</a></li>
         </ul>
-      </li>
+      </li> -->
     <!--Personal loan end -->
+
+    <!-- Website Settings menu start -->
+        <li class="treeview  ">
+            <a href="#">
+                <i class="fa fa-cog"></i><span>Web Settings</span>
+                <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+            </a>
+            <ul class="treeview-menu">
+                <li class=""><a href="{{ url('/admin/slider/create') }}">Slider</a></li>
+                <li class=""><a href="#">Advertisement </a></li>
+                <li class=""> <a href="#">Product Review </a></li>
+                <li class=""><a href="{{ url('/admin/subscribe') }}">Subscriber </a></li>
+                <li class=""><a href="#">Wishlist</a></li>
+                <li class=""><a href="#">Coupon</a></li>
+                <li class=""><a href="{{ url('/admin/contact') }}">Contact Form </a> </li>
+                <li class=""><a href="#">Our Location </a></li>
+                <li class=""> <a href="#">Shipping Method </a></li>
+                <li class=""><a href="#">Setting </a></li>
+            </ul>
+        </li>
+      <!-- Website Settings menu end -->
 
 
     <!-- Software Settings menu start -->
@@ -282,18 +346,6 @@
             </span>
         </a>
         <ul class="treeview-menu">
-
-          <!-- Category menu start -->
-            <li class="treeview">
-              <a href=""style="position: relative;">Category<span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i></span>
-            </a>
-              <ul class="treeview-menu">
-                <li><a href="{{ url('/admin/category/create') }}">Add Category</a></li>
-                <li><a href="{{ url('/admin/category') }}">Manage Category</a></li>
-              </ul>
-            </li>
-          <!-- Category menu end -->
 
         <!-- Unit Start -->
           <li class="treeview">
@@ -356,189 +408,10 @@
         </ul>
       </li>
     <!-- Role permission End -->
-@endif
+  @endif
 
 
-<!-- user dashboard -->
-@if(Auth::user()->admin == false )
-            <li class=" ">
-                <a href="http://..com/Demo_saleserpv9/"><i class="ti-dashboard"></i> <span>Dashboard</span>
-                    <span class="pull-right-container">
-                        <span class="label label-success pull-right"></span>
-                    </span>
-                </a>
-            </li>
-
-            <!-- Invoice menu start -->
-            <li class="treeview  ">
-                <a href="#">
-                    <i class="ti-layout-accordion-list"></i><span>Invoice</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Cinvoice">New Invoice</a></li>
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Cinvoice/manage_invoice">Manage Invoice </a></li>
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Cinvoice/pos_invoice">POS Invoice</a></li>
-                </ul>
-            </li>
-            <!-- Invoice menu end -->
-
-
-<!--New Account start-->
-             <li class="treeview  ">
-                <a href="#">
-                    <i class="fa fa-money"></i><span>Accounts</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li class="treeview  "><a href="http://.bdtask.com/Demo_saleserpv9/accounts/show_tree">Chart of Account</a></li>
-                  <li class="treeview  "><a href="http://.bdtask.com/Demo_saleserpv9/accounts/supplier_payment">Supplier Payment</a></li>
-                  <li class="treeview  "><a href="http://.bdtask.com/Demo_saleserpv9/accounts/customer_receive">Customer Receive</a></li>
-              </li>
-           <!-- New Account End -->
-
-            <li class="treeview  ">
-                <a href="#">
-                    <i class="ti-tag"></i><span>Category</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Ccategory">Add Category</a></li>
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Ccategory/manage_category">Manage Category</a></li>
-                </ul>
-            </li>
-                    <!-- Category menu end -->
-            <!-- Product menu start -->
-            <li class="treeview  ">
-                <a href="#">
-                    <i class="ti-bag"></i><span>Product</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Cproduct">Add Product</a></li>
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Cproduct/manage_product">Manage Product</a></li>
-                </ul>
-            </li>
-            <!-- Product menu end -->
-
-            <!-- Customer menu start -->
-              <li class="treeview  ">
-                <a href="#">
-                    <i class="fa fa-handshake-o"></i><span>Customer</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Ccustomer">Add Customer</a></li>
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Ccustomer/manage_customer">Manage Customer</a></li>
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Ccustomer/credit_customer">Credit Customer</a></li>
-                  <li><a href="http://.bdtask.com/Demo_saleserpv9/Ccustomer/paid_customer">Paid Customer</a></li>
-                </ul>
-            </li>
-                    <!-- Customer menu end -->
-            <!--Unit menu start--> 
-                         <li class="treeview ">
-                <a href="#">
-                    <i class="fa fa-universal-access"></i><span>Unit</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                                         <li><a href="http://.bdtask.com/Demo_saleserpv9/Cunit">Add Unit</a></li>
-                                                </ul>
-            </li>
-                    <!--Unit menu close--> 
-            <!-- Supplier menu start -->
-            <li class="treeview  ">
-                <a href="#">
-                    <i class="ti-user"></i><span>Supplier</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                                         <li><a href="http://.bdtask.com/Demo_saleserpv9/Csupplier">Add Supplier</a></li>
-                                                      <li><a href="http://.bdtask.com/Demo_saleserpv9/Csupplier/manage_supplier">Manage Supplier</a></li>
-                                                                              </ul>
-            </li>
-                    <!-- Supplier menu end -->
-
-            <!-- Purchase menu start -->
-                        <li class="treeview  ">
-                <a href="#">
-                    <i class="ti-shopping-cart"></i><span>Purchase</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                                         <li><a href="http://.bdtask.com/Demo_saleserpv9/Cpurchase">Add Purchase</a></li>
-                                                                <li><a href="http://.bdtask.com/Demo_saleserpv9/Cpurchase/manage_purchase">Manage Purchase</a></li>
-                                       </ul>
-            </li>
-                    <!-- Purchase menu end -->            
-            <!-- start return -->
-              <li class="treeview  ">
-                <a href="#">
-                    <i class="fa fa-retweet" aria-hidden="true"></i><span>Return</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                                         <li><a href="http://.bdtask.com/Demo_saleserpv9/Cretrun_m">Return</a></li>
-                                                               <li><a href="http://.bdtask.com/Demo_saleserpv9/Cretrun_m/return_list">Stock Return List</a></li>
-                                                               <li><a href="http://.bdtask.com/Demo_saleserpv9/Cretrun_m/supplier_return_list">Supplier Return List</a></li>
-                                          
-                </ul>
-            </li>
-
-            <!-- Tax menu start -->
-                    
-        <!-- Transection menu End -->
-
-
-        <!-- Stock menu start -->
-          <li class="treeview  ">
-            <a href="#">
-                <i class="ti-bar-chart"></i><span>Stock</span>
-                <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="http://.bdtask.com/Demo_saleserpv9/Creport">Stock Report</a></li>
-              <li><a href="http://.bdtask.com/Demo_saleserpv9/Creport/stock_report_supplier_wise">Stock Report (Supplier Wise)</a></li>
-              <li><a href="http://.bdtask.com/Demo_saleserpv9/Creport/stock_report_product_wise">Stock Report (Product Wise)</a></li>
-            </ul>
-          </li>
-            <!-- Stock menu end -->
-
-            <!-- Bank menu start -->
-            <li class="treeview  ">
-                <a href="#">
-                    <i class="ti-briefcase"></i><span>Bank</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="http://.bdtask.com/Demo_saleserpv9/Csettings/index">Add New Bank</a></li>
-                    <li><a href="http://.bdtask.com/Demo_saleserpv9/Csettings/bank_list">Manage Bank</a></li>
-                </ul>
-            </li>
-          @endif
-        </ul>
+      </ul>
     </div> <!-- /.sidebar -->
 </aside >
 

@@ -26,6 +26,11 @@ use DB;
 
 class ReturnController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     public function index(){
     	$component = '';
     	return view('admin.return.sale-purchase-return', get_defined_vars());

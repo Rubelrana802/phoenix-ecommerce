@@ -14,6 +14,11 @@ use App\Product;
 class ReportController extends Controller
 {
 
+public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
 //Start purchase report
     public function purchasereport(){
     	$websetting = Websetting::first();

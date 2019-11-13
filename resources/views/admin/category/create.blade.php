@@ -41,8 +41,8 @@
                     </div>
                     <form action="{{ route('category.store') }}" class="form-vertical" id="insert_category" method="post" accept-charset="utf-8">
                     <div class="panel-body">
-                    	 @method('POST')
-					@csrf
+                         @method('POST')
+                    @csrf
                         <div class="form-group row">
                             <label for="category_name" class="col-sm-3 col-form-label">Category Name <i class="text-danger">*</i></label>
                             <div class="col-sm-5">
@@ -50,10 +50,39 @@
                             </div>
                         </div>
 
+                        
+
+                        <div class="form-group row">
+                            <label for="category_name" class="col-sm-3 col-form-label"> Parent category <i class="text-danger"></i></label>
+                            <div class="col-sm-5">
+                                <select class="form-control" name="parent_id" id="parent_id">
+                                    <option value="">Select One</option>
+                                    @foreach($categorys as $category)
+                                        <option value="{{ $category->id }}"> {{ $category->name }} </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="cat_favicon" class="col-sm-3 col-form-label">Category Icon</label>
+                            <div class="col-sm-5">
+                                <input class="form-control" name ="cat_favicon" id="cat_favicon" type="file">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="cat_image" class="col-sm-3 col-form-label">Category Image </label>
+                            <div class="col-sm-5">
+                                <input class="form-control" name ="cat_image" id="cat_image" type="file">
+                                <span class="help-block small">This is optional</span>
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="example-text-input" class="col-sm-4 col-form-label"></label>
                             <div class="col-sm-6">
-                                <input type="submit" id="add-customer" class="btn btn-success btn-large" name="add-customer" value="Save" />
+                                <input type="submit" id="add-customer" class="btn btn-large btn-success btn-large" name="add-customer" value="Save" />
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use App\Store;
 class StoreController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
+    
     public function index(){
     	return view('admin.store.create');
     }

@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class UnitController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('checkRole:admin');
+    }
     /**
      * Display a listing of the resource.
      *

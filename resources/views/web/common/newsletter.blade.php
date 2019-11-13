@@ -18,8 +18,9 @@
 		            <div class="col-lg-7">
 		                <div class="newslatter_inner fix">
 		                    <h4>send Newsletters</h4>
-		                    <form action="#">
-		                        <input placeholder="enter your email" type="text">
+		                    <form action="{{ route('subscribe.store') }}" method="post">
+		                    	@csrf
+		                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 		                        <button type="submit">Subscribe</button>
 		                    </form>
 		                </div>

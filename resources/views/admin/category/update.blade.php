@@ -39,13 +39,26 @@
                     <div class="panel-body">
                     	<div class="form-group row">
                             <label for="category_name" class="col-sm-3 col-form-label">Category Name <i class="text-danger">*</i></label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-5">
                                 <input class="form-control" name ="category_name" id="category_name" type="text" placeholder="Category Name"  required="" value="{{ $category->name }}">
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="category_name" class="col-sm-3 col-form-label"> Parent category <i class="text-danger"></i></label>
+                            <div class="col-sm-5">
+                                <select class="form-control" name="parent_id" id="parent_id">
+                                    <option value="">Select One</option>
+                                    @foreach ($categorys as $cat)
+                                            <option value="{{ $cat->id }}" {{ $cat->id ==  $cat->parent_id ? 'selected' : '' }} >{{ $cat->name }}</option>
+                                        @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+
                        <div class="form-group row">
                             <label for="status" class="col-sm-3 col-form-label">Status <i class="text-danger">*</i></label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-5">
                                 <select class="form-control" name="status" id="status">
                                     <option value="1">Active</option>
                                     <option value="0">Inactive</option>
@@ -57,7 +70,7 @@
 						<input type="hidden" name="_method" value="PUT">
                         <div class="form-group row">
                             <label for="example-text-input" class="col-sm-4 col-form-label"></label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-5">
                                 <input type="submit" id="add-Customer" class="btn btn-success btn-large" name="add-Customer" value="Save Changes" />
                             </div>
                         </div>
